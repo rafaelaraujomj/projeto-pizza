@@ -66,7 +66,7 @@ public class Pizzaria {
         scanner.close();
     }
 
-    // --- REQUISITO: MÉTODO PARA CÁLCULO DE FRETE ---
+    // REQUISITO: MÉTODO PARA CÁLCULO DE FRETE 
     private static double calcularFrete(double distanciaKm, int qtdPizzas) {
         double precoPorKm = 1.50; // R$ 1,50 por Km
         double precoPorPizza = 0.50; // R$ 0,50 por "peso" da pizza
@@ -85,7 +85,7 @@ public class Pizzaria {
         System.out.printf("Valor do Frete: R$ %.2f\n", valor);
     }
 
-    // --- REAJUSTE: Extraí a lógica de criar pizza para usar tanto no criar quanto no alterar ---
+    // REAJUSTE: Extraí a lógica de criar pizza para usar tanto no criar quanto no alterar
     private static Pizza montarPizzaInput(Scanner scanner) {
         int x = 1;
         System.out.println("Qual o tamanho da pizza? ");
@@ -169,7 +169,7 @@ public class Pizzaria {
         System.out.println("Pedido criado com ID: " + pedido.getId());
     }
 
-    // --- REQUISITO: ALTERAR PEDIDO ---
+    // REQUISITO: ALTERAR PEDIDO
     private static void alterarPedido(Scanner scanner, List<Pedido> listaPedidos) {
         if(listaPedidos.isEmpty()){
             System.out.println("Não há pedidos cadastrados.");
@@ -256,7 +256,7 @@ public class Pizzaria {
         return new Cliente(nome, endereco, telefone, email);
     }
 
-    // --- REQUISITO: RELATÓRIO COM GRAFOS ---
+    // REQUISITO: RELATÓRIO COM GRAFOS
     private static void gerarRelatorio(List<Pedido> listaPedidos) {
         System.out.println("\n--- RELATÓRIO DE VENDAS ---");
         
@@ -311,7 +311,6 @@ public class Pizzaria {
     }
 
     private static void gerarListaClientes(List<Cliente> listaClientes) {
-        // (Mantive seu código original aqui, está ok)
         int x = 1;
         if (listaClientes.isEmpty()) {
             System.out.println("Lista de clientes vazia");
